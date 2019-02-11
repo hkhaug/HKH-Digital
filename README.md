@@ -16,3 +16,5 @@ Both 12-hour and 24-hour clocks are supported, as well as a number of languages:
 * Italian
 * Spanish
 * Swedish
+
+![Screenshot](HKH-Digital-screenshot.png "Screenshot")
