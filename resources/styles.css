@@ -1,0 +1,65 @@
+.background
+{
+  viewport-fill: black;
+}
+
+#batteryPercentage
+{
+  font-size: 32;
+  fill: white;
+}
+
+#weekData
+{
+  font-size: 32;
+  fill: white;
+}
+
+#dateData
+{
+  font-size: 32;
+  fill: white;
+}
+
+#clockData
+{
+  font-family: System-Bold;
+  font-size: 115;
+  fill: dodgerblue;
+}
+
+#caloriesData
+{
+  font-size: 36;
+  fill: white;
+}
+
+#distanceData
+{
+  font-size: 36;
+  fill: white;
+}
+
+#stepsData
+{
+  font-size: 36;
+  fill: white;
+}
+
+#heartbeatsData
+{
+  font-size: 36;
+  fill: white;
+}
+
+#activeMinutesData
+{
+  font-size: 36;
+  fill: white;
+}
+
+#floorsData
+{
+  font-size: 36;
+  fill: white;
+}

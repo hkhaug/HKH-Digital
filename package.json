@@ -1,0 +1,42 @@
+{
+  "fitbit": {
+    "appUUID": "2acb8c05-2b22-4f81-a82d-ab72f66c147d",
+    "appType": "clockface",
+    "appDisplayName": "HKH Digital",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [
+      "access_activity",
+      "access_heart_rate"
+    ],
+    "buildTargets": [
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "HKH Digital"
+      },
+      "de": {
+        "name": "HKH Digital"
+      },
+      "es": {
+        "name": "HKH Digital"
+      },
+      "fr": {
+        "name": "HKH Numérique"
+      },
+      "it": {
+        "name": "HKH Digitale"
+      },
+      "nl": {
+        "name": "HKH Digitaal"
+      },
+      "sv": {
+        "name": "HKH Digital"
+      }
+    }
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~3.0.0"
+  }
+}
