@@ -1,21 +1,21 @@
 <svg class="background">
   <image id="batteryIcon" x="10" y="10" width="31" height="18" />
-  <text id="batteryPercentage" x="1" y="60" text-length="4" />
-  <text id="weekData" x="298" y="26" text-length="12" text-anchor="end" />
-  <text id="dateData" x="298" y="60" text-length="10" text-anchor="end" />
-  <text id="clockData" x="150" y="163" text-length="5" text-anchor="middle" />
+  <text id="batteryPercentage" x="1" y="54" text-length="4" />
+  <text id="weekData" x="346" y="22" text-length="12" text-anchor="end" />
+  <text id="dateData" x="346" y="54" text-length="10" text-anchor="end" />
+  <text id="clockData" x="174" y="138" text-length="5" text-anchor="middle" />
 
-  <image id="caloriesIcon" href="icons/Calories.png" x="20" y="192" width="24" height="24" display="inline" />
-  <text id="caloriesData" x="55" y="214" text-length="8" />
-  <image id="distance" href="icons/Distance.png" x="20" y="234" width="24" height="24" display="inline" />
-  <text id="distanceData" x="55" y="256" text-length="8" />
-  <image id="steps" href="icons/Steps.png" x="20" y="276" width="24" height="24" display="inline" />
-  <text id="stepsData" x="55" y="298" text-length="8" />
+  <image id="caloriesIcon" href="icons/Calories.png" x="23" y="155" width="24" height="24" display="inline" />
+  <text id="caloriesData" x="64" y="178" text-length="8" />
+  <image id="distance" href="icons/Distance.png" x="23" y="190" width="24" height="24" display="inline" />
+  <text id="distanceData" x="64" y="213" text-length="8" />
+  <image id="steps" href="icons/Steps.png" x="23" y="225" width="24" height="24" display="inline" />
+  <text id="stepsData" x="64" y="248" text-length="8" />
   
-  <image id="heart" href="icons/Heart.png" x="185" y="192" width="24" height="24" display="inline" />
-  <text id="heartbeatsData" x="220" y="214" text-length="4" />
-  <image id="activeMinutesIcon" href="icons/ActiveMinutes.png" x="185" y="234" width="24" height="24" display="inline" />
-  <text id="activeMinutesData" x="220" y="256" text-length="8" />
-  <image id="floorsIcon" href="icons/Floors.png" x="185" y="276" width="24" height="24" display="inline" />
-  <text id="floorsData" x="220" y="298" text-length="8" />
+  <image id="heart" href="icons/Heart.png" x="215" y="155" width="24" height="24" display="inline" />
+  <text id="heartbeatsData" x="255" y="178" text-length="4" />
+  <image id="activeMinutesIcon" href="icons/ActiveMinutes.png" x="215" y="190" width="24" height="24" display="inline" />
+  <text id="activeMinutesData" x="255" y="213" text-length="8" />
+  <image id="floorsIcon" href="icons/Floors.png" x="215" y="225" width="24" height="24" display="inline" />
+  <text id="floorsData" x="255" y="248" text-length="8" />
 </svg>

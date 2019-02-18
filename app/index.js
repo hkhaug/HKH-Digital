@@ -1,5 +1,7 @@
+import { me as device } from "device";
 import { locale } from "user-settings";
 import { preferences } from "user-settings";
+import { units } from "user-settings";
 import { charger, battery } from "power";
 import { today } from "user-activity";
 import { HeartRateSensor } from "heart-rate";
@@ -19,62 +21,27 @@ const heartbeatsData = document.getElementById("heartbeatsData");
 const activeMinutesData = document.getElementById("activeMinutesData");
 const floorsData = document.getElementById("floorsData");
 
-if(preferences.clockDisplay == "12h")
-  {
-    let hours12 = true;
-  }
-else
-  {
-    let hours12 = false;
-  }
+if(preferences.clockDisplay == "12h") let hours12 = true; else let hours12 = false;
+if(units.distance === "us") let distanceDivider = 1609.344; else let distanceDivider = 1000;
 
 let languageCode = locale.language;
-if(languageCode.length > 2)
-  {
-    languageCode = languageCode.slice(0, 2);
-  }
-if(languageCode == "de")
-  {
-    let dayNames = ["Son", "Mon", "Die", "Mit", "Don", "Fre", "Sam"];
-    let weekWord = "woche";
-  }
-else if(languageCode == "es")
-  {
-    let dayNames = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"];
-    let weekWord = "semana";
-  }
-else if(languageCode == "fr")
-  {
-    let dayNames = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
-    let weekWord = "semaine";
-  }
-else if(languageCode == "it")
-  {
-    let dayNames = ["Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab"];
-    let weekWord = "settimana";
-  }
-else if(languageCode == "nl")
-  {
-    let dayNames = ["Zon", "Maa", "Din", "Woe", "Don", "Vri", "Zat"];
-    let weekWord = "week";
-  }
-else if(languageCode == "sv")
-  {
-    let dayNames = ["Sön", "Mån", "Tis", "Ons", "Tor", "Fre", "Lör"];
-    let weekWord = "vecka";
-  }
-else
-  {
-    let dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    let weekWord = "week";
-  }
+if(languageCode.length > 2) languageCode = languageCode.slice(0, 2);
+if(languageCode == "de") { let dayNames = ["Son", "Mon", "Die", "Mit", "Don", "Fre", "Sam"]; let weekWord = "woche"; }
+else if(languageCode == "es") { let dayNames = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"]; let weekWord = "semana"; }
+else if(languageCode == "fr") { let dayNames = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"]; let weekWord = "semaine"; }
+else if(languageCode == "it") { let dayNames = ["Dom", "Lun", "Mar", "Mer", "Gio", "Ven", "Sab"]; let weekWord = "settimana"; }
+else if(languageCode == "nl") { let dayNames = ["Zon", "Maa", "Din", "Woe", "Don", "Vri", "Zat"]; let weekWord = "week"; }
+else if(languageCode == "sv") { let dayNames = ["Sön", "Mån", "Tis", "Ons", "Tor", "Fre", "Lör"]; let weekWord = "vecka"; }
+else { let dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]; let weekWord = "week"; }
+
+if (!device.screen) device.screen = { width: 348, height: 250 };
 
 clock.granularity = "seconds";
 
 let hrm = new HeartRateSensor();
 hrm.start();
 
-batteryIcon.href=calcBatteryImage();
+batteryIcon.href = calcBatteryImage();
 
 battery.onchange = (charger, ev) => {
   batteryIcon.href = calcBatteryImage();
@@ -115,17 +82,17 @@ clock.ontick = (evt) => {
   let date = util.zeroPad(currentTime.getDate());
   let weekNumber = util.getWeek(currentTime);
   let calories = today.adjusted.calories;
-  let distance = today.adjusted.distance;
+  let meters = today.adjusted.distance;
   let steps = today.adjusted.steps;
   let beats = hrm.heartRate;
   let activeMinutes = today.adjusted.activeMinutes;
   let floors = today.adjusted.elevationGain;
-  
+
   weekData.text = `${weekdayName} ${weekWord} ${weekNumber}`;
   dateData.text = `${date}.${month}.${year}`;
   clockData.text = `${hours}:${minutes}`;
   caloriesData.text = calories;
-  distanceData.text = Number(distance*0.001).toFixed(2);
+  distanceData.text = Number(meters / distanceDivider).toFixed(2);
   stepsData.text = steps;
   heartbeatsData.text = beats;
   activeMinutesData.text = activeMinutes;

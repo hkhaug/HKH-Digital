@@ -10,7 +10,8 @@
       "access_heart_rate"
     ],
     "buildTargets": [
-      "meson"
+      "meson",
+      "higgs"
     ],
     "i18n": {
       "en": {
