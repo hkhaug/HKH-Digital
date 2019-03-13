@@ -9,11 +9,14 @@ This clock face displays a lot:
 * Calories burned
 
 Both 12-hour and 24-hour clocks are supported, as well as a number of languages:
+* Danish
 * Dutch
 * English
+* Finnish
 * French
 * German
 * Italian
+* Norwegian
 * Spanish
 * Swedish
 
