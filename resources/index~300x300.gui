@@ -1,9 +1,9 @@
 <svg class="background">
   <image id="batteryIcon" x="10" y="10" width="31" height="18" />
   <text id="batteryPercentage" x="1" y="60" text-length="4" />
-  <text id="weekData" x="298" y="26" text-length="12" text-anchor="end" />
+  <text id="weekData" x="298" y="26" text-length="20" text-anchor="end" />
   <text id="dateData" x="298" y="60" text-length="10" text-anchor="end" />
-  <text id="clockData" x="150" y="163" text-length="5" text-anchor="middle" />
+  <text id="clockData" x="148" y="163" text-length="5" text-anchor="middle" />
 
   <image id="caloriesIcon" href="icons/Calories.png" x="20" y="192" width="24" height="24" display="inline" />
   <text id="caloriesData" x="55" y="214" text-length="8" />
